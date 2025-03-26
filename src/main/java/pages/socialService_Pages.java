@@ -140,7 +140,7 @@ public class socialService_Pages extends StartupPage {
 	/**@Test7
 	 * about this method validateWarnningMessageOfSSUInformationSection() 
 	 * @param : Map<String, String>,get the data from Excel file (expected_Data) as required
-	 * @description : return the warnning message displayed in "SSU Information" section.
+	 * @description : return the warning message displayed in "SSU Information" section.
 	 * @return : String
 	 * @author : YAKSHA
 	 */
