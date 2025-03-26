@@ -43,12 +43,12 @@ public class socialService_Pages extends StartupPage {
 
 	/**@Test1.1
 	 * about this method loginTohealthAppByGivenValidCredetial() 
-	 * @param : Map<String, String>
+	 * @param : Map<String, String>,get the data from Excel file (login) as required
 	 * @description : fill usernameTextbox & passwordTextbox and click on sign in button
 	 * @return : Boolean
 	 * @author : YAKSHA
 	 */
-	public boolean loginToHealthAppByGivenValidCredetial(Map<String, String> expectedData) throws Exception {
+	public Boolean loginToHealthAppByGivenValidCredetial(Map<String, String> expectedData) throws Exception {
 		
 		return false;
 	}
@@ -56,7 +56,7 @@ public class socialService_Pages extends StartupPage {
 	/**@Test1.2
 	 * about this method verifyTitleOfThePage() 
 	 * @param : null
-	 * @description : it will navigate to the URL and validate the title of the current page.
+	 * @description : it will navigate to the URL and return the title of the current page.
 	 * @return : String
 	 * @author : YAKSHA
 	 */
@@ -68,7 +68,7 @@ public class socialService_Pages extends StartupPage {
 	/**@Test1.3
 	 * about this method verifyURLOfThePage() 
 	 * @param : null
-	 * @description : it will navigate to the URL and validate the URL of the current page.
+	 * @description : it will return the URL of the current page.
 	 * @return : String
 	 * @author : YAKSHA
 	 */
@@ -90,10 +90,10 @@ public class socialService_Pages extends StartupPage {
 	}
 
 	/**@Test3
-	 * about this method registerNewSSUPatientButtonisPresent() 
+	 * about this method verifyRegisterNewSSUPatientButtonisPresentAndValidateFormName()
 	 * @param : null
-	 * @description : Verify that Register New SSU Patient button is present inside the SocialService Tab.
-	 * @return : Boolean
+	 * @description : It will return the title of the form pop up by clicking the "Register New SSU Patient" button.
+	 * @return : String
 	 * @author : YAKSHA
 	 */
 	public String verifyRegisterNewSSUPatientButtonisPresentAndValidateFormName() throws Exception {
@@ -103,8 +103,9 @@ public class socialService_Pages extends StartupPage {
 	/**@Test4
 	 * about this method validateErrorMessageInLastNameTextfield() 
 	 * @param : null
-	 * @description : Validate the error message in Last Name text field without filling any data and clicking on "Register" Button
-	 * @author : YAKSHA
+	 * @description : return the error message in Last Name text field without filling any data and clicking on "Register" Button
+	 * @return : String 
+  	 * @author : YAKSHA
 	 */
 	public String validateErrorMessageInLastNameTextfield() throws Exception {
 		
@@ -112,9 +113,9 @@ public class socialService_Pages extends StartupPage {
 	}
 
 	/**@Test5
-	 * about this method fillAllTheTextfieldsinsideTheNewSSUPatientRegistrationForm() 
-	 * @param : Map<String, String>
-	 * @description : Fill all the text fields which are present inside the New SSU Patient Registration popup  and Check the data which we are entered are present in First Name Field. 
+	 * about this method fillDataInTextfieldsAndVerifyEnteredDataInFirstName() 
+	 * @param : Map<String, String>,get the data from Excel file (expected_Data) as required
+	 * @description : Fill all the mandatory text fields which are present inside the New SSU Patient Registration popup and return the data which we have entered in First Name Field. 
 	 * @return : String
 	 * @author : YAKSHA
 	 */
@@ -125,9 +126,9 @@ public class socialService_Pages extends StartupPage {
 
 
 	/**@Test6
-	 * about this method scrollToButtomOfThePageAndVerifyCloseButtonIsPresent() 
+	 * about this method scrollToButtomOfThePageAndVerifyRegisterAndCloseButtonIsPresent()
 	 * @param : null
-	 * @description : scroll to the bottom of the page and verify that "Close" button is present or not.
+	 * @description : scroll to the bottom of the page and verify that "Register" and "Close" button are present or not.
 	 * @return : Boolean
 	 * @author : YAKSHA
 	 */
@@ -137,9 +138,9 @@ public class socialService_Pages extends StartupPage {
 	}
 
 	/**@Test7
-	 * about this method validateWarnningMessageOfNewSSUPatientRegistrationForms() 
-	 * @param : Map<String, String>
-	 * @description : Validate the warnning message for the membership dropdown.
+	 * about this method validateWarnningMessageOfSSUInformationSection() 
+	 * @param : Map<String, String>,get the data from Excel file (expected_Data) as required
+	 * @description : return the warnning message displayed in "SSU Information" section.
 	 * @return : String
 	 * @author : YAKSHA
 	 */
@@ -150,8 +151,8 @@ public class socialService_Pages extends StartupPage {
 	
 	/**@Test8
 	 * about this method verifyTextboxIsPresentBySelectingYesFromHasTargetGroupCertificateDropdown() 
-	 * @param : get the data from Excel file as type Map<String, String> expectedData
-	 * @description : it will select the country as per Excel expected data
+	 * @param : Map<String, String>,get the data from Excel file (expected_Data) as required  
+	 * @description : it will return the value of "Has Target Group Certificate?" field.
 	 * @return : String
 	 * @author : YAKSHA
 	 */
